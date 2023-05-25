@@ -249,14 +249,14 @@ screen quick_menu():
             xalign 0.5
             yalign 1.0
 
-            textbutton _("Back") action Rollback()
-            textbutton _("History") action ShowMenu('history')
-            textbutton _("Skip") action Skip() alternate Skip(fast=True, confirm=True)
-            textbutton _("Auto") action Preference("auto-forward", "toggle")
-            textbutton _("Save") action ShowMenu('save')
-            textbutton _("Q.Save") action QuickSave()
-            textbutton _("Q.Load") action QuickLoad()
-            textbutton _("Prefs") action ShowMenu('preferences')
+            textbutton _("되감기") action Rollback()
+            textbutton _("대사록") action ShowMenu('history')
+            textbutton _("넘기기") action Skip() alternate Skip(fast=True, confirm=True)
+            textbutton _("자동진행") action Preference("auto-forward", "toggle")
+            textbutton _("저장하기") action ShowMenu('save')
+            textbutton _("빠른저장") action QuickSave()
+            textbutton _("불러오기") action QuickLoad()
+            textbutton _("환경설정") action ShowMenu('preferences')
 
 
 ## This code ensures that the quick_menu screen is displayed in-game, whenever
@@ -297,17 +297,17 @@ screen navigation():
 
         if main_menu:
 
-            textbutton _("Start") action Start()
+            textbutton _("시작하기") action Start()
 
         else:
 
-            textbutton _("History") action ShowMenu("history")
+            textbutton _("대사록") action ShowMenu("history")
 
-            textbutton _("Save") action ShowMenu("save")
+            textbutton _("저장") action ShowMenu("save")
 
-        textbutton _("Load") action ShowMenu("load")
+        textbutton _("불러오기") action ShowMenu("load")
 
-        textbutton _("Preferences") action ShowMenu("preferences")
+        textbutton _("환경설정") action ShowMenu("preferences")
 
         if _in_replay:
 
@@ -315,20 +315,20 @@ screen navigation():
 
         elif not main_menu:
 
-            textbutton _("Main Menu") action MainMenu()
+            textbutton _("메인 메뉴") action MainMenu()
 
-        textbutton _("About") action ShowMenu("about")
+        textbutton _("작품정보") action ShowMenu("about")
 
         if renpy.variant("pc") or (renpy.variant("web") and not renpy.variant("mobile")):
 
             ## Help isn't necessary or relevant to mobile devices.
-            textbutton _("Help") action ShowMenu("help")
+            textbutton _("조작방법") action ShowMenu("help")
 
         if renpy.variant("pc"):
 
             ## The quit button is banned on iOS and unnecessary on Android and
             ## Web.
-            textbutton _("Quit") action Quit(confirm=not main_menu)
+            textbutton _("종료하기") action Quit(confirm=not main_menu)
 
 
 style navigation_button is gui_button
@@ -469,7 +469,7 @@ screen game_menu(title, scroll=None, yinitial=0.0):
 
     use navigation
 
-    textbutton _("Return"):
+    textbutton _("돌아가기"):
         style "return_button"
 
         action Return()
@@ -583,19 +583,19 @@ screen save():
 
     tag menu
 
-    use file_slots(_("Save"))
+    use file_slots(_("저장하기"))
 
 
 screen load():
 
     tag menu
 
-    use file_slots(_("Load"))
+    use file_slots(_("불러오기"))
 
 
 screen file_slots(title):
 
-    default page_name_value = FilePageNameInputValue(pattern=_("Page {}"), auto=_("Automatic saves"), quick=_("Quick saves"))
+    default page_name_value = FilePageNameInputValue(pattern=_("{} 페이지"), auto=_("자동 저장"), quick=_("빠른 저장"))
 
     use game_menu(title):
 
@@ -611,7 +611,6 @@ screen file_slots(title):
 
                 key_events True
                 xalign 0.5
-                action page_name_value.Toggle()
 
                 input:
                     style "page_label_text"
@@ -637,7 +636,7 @@ screen file_slots(title):
 
                         add FileScreenshot(slot) xalign 0.5
 
-                        text FileTime(slot, format=_("{#file_time}%A, %B %d %Y, %H:%M"), empty=_("empty slot")):
+                        text FileTime(slot, format=_("{#file_time}%A, %B %d %Y, %H:%M"), empty=_("빈 슬롯")):
                             style "slot_time_text"
 
                         text FileSaveName(slot):
@@ -660,10 +659,10 @@ screen file_slots(title):
                     textbutton _("<") action FilePagePrevious()
 
                     if config.has_autosave:
-                        textbutton _("{#auto_page}A") action FilePage("auto")
+                        textbutton _("{#auto_page}자동 저장") action FilePage("auto")
 
                     if config.has_quicksave:
-                        textbutton _("{#quick_page}Q") action FilePage("quick")
+                        textbutton _("{#quick_page}빠른 저장") action FilePage("quick")
 
                     ## range(1, 10) gives the numbers from 1 to 9.
                     for page in range(1, 10):
@@ -736,16 +735,16 @@ screen preferences():
 
                     vbox:
                         style_prefix "radio"
-                        label _("Display")
-                        textbutton _("Window") action Preference("display", "window")
-                        textbutton _("Fullscreen") action Preference("display", "fullscreen")
+                        label _("화면 모드")
+                        textbutton _("창 모드") action Preference("display", "window")
+                        textbutton _("전체 화면") action Preference("display", "fullscreen")
 
                 vbox:
                     style_prefix "check"
-                    label _("Skip")
-                    textbutton _("Unseen Text") action Preference("skip", "toggle")
-                    textbutton _("After Choices") action Preference("after choices", "toggle")
-                    textbutton _("Transitions") action InvertSelected(Preference("transitions", "toggle"))
+                    label _("넘기기")
+                    textbutton _("읽지 않은 지문") action Preference("skip", "toggle")
+                    textbutton _("선택지 이후") action Preference("after choices", "toggle")
+                    textbutton _("화면 전환") action InvertSelected(Preference("transitions", "toggle"))
 
                 ## Additional vboxes of type "radio_pref" or "check_pref" can be
                 ## added here, to add additional creator-defined preferences.
@@ -758,25 +757,25 @@ screen preferences():
 
                 vbox:
 
-                    label _("Text Speed")
+                    label _("텍스트 속도")
 
                     bar value Preference("text speed")
 
-                    label _("Auto-Forward Time")
+                    label _("자동 진행 속도")
 
                     bar value Preference("auto-forward time")
 
                 vbox:
 
                     if config.has_music:
-                        label _("Music Volume")
+                        label _("배경음 음량")
 
                         hbox:
                             bar value Preference("music volume")
 
                     if config.has_sound:
 
-                        label _("Sound Volume")
+                        label _("효과음 음량")
 
                         hbox:
                             bar value Preference("sound volume")
@@ -784,20 +783,10 @@ screen preferences():
                             if config.sample_sound:
                                 textbutton _("Test") action Play("sound", config.sample_sound)
 
-
-                    if config.has_voice:
-                        label _("Voice Volume")
-
-                        hbox:
-                            bar value Preference("voice volume")
-
-                            if config.sample_voice:
-                                textbutton _("Test") action Play("voice", config.sample_voice)
-
                     if config.has_music or config.has_sound or config.has_voice:
                         null height gui.pref_spacing
 
-                        textbutton _("Mute All"):
+                        textbutton _("음소거"):
                             action Preference("all mute", "toggle")
                             style "mute_all_button"
 
@@ -984,8 +973,8 @@ screen help():
 
             hbox:
 
-                textbutton _("Keyboard") action SetScreenVariable("device", "keyboard")
-                textbutton _("Mouse") action SetScreenVariable("device", "mouse")
+                textbutton _("키보드") action SetScreenVariable("device", "keyboard")
+                textbutton _("마우스") action SetScreenVariable("device", "mouse")
 
                 if GamepadExists():
                     textbutton _("Gamepad") action SetScreenVariable("device", "gamepad")
@@ -1001,75 +990,70 @@ screen help():
 screen keyboard_help():
 
     hbox:
-        label _("Enter")
-        text _("Advances dialogue and activates the interface.")
+        label _("엔터(Enter)")
+        text _("대사 진행 및 UI (선택지 포함) 선택.")
 
     hbox:
-        label _("Space")
-        text _("Advances dialogue without selecting choices.")
+        label _("스페이스(Space)")
+        text _("대사를 진행하되 선택지는 선택하지 않음.")
 
     hbox:
-        label _("Arrow Keys")
-        text _("Navigate the interface.")
+        label _("방향키")
+        text _("UI 이동.")
 
     hbox:
-        label _("Escape")
-        text _("Accesses the game menu.")
+        label _("ESC")
+        text _("게임 메뉴 불러오기.")
 
     hbox:
-        label _("Ctrl")
-        text _("Skips dialogue while held down.")
+        label _("컨트롤(Ctrkl)")
+        text _("누르고 있는 동안 대사를 넘기기.")
 
     hbox:
-        label _("Tab")
-        text _("Toggles dialogue skipping.")
+        label _("탭(Tab)")
+        text _("대사 넘기기를 토글.")
 
     hbox:
-        label _("Page Up")
-        text _("Rolls back to earlier dialogue.")
+        label _("페이지 업(Page Up)")
+        text _("이전 대사로 롤백.")
 
     hbox:
-        label _("Page Down")
-        text _("Rolls forward to later dialogue.")
+        label _("페이지 다운(Page Down)")
+        text _("이후 대사로 롤포워드.")
 
     hbox:
         label "H"
-        text _("Hides the user interface.")
+        text _("UI 숨기기.")
 
     hbox:
         label "S"
-        text _("Takes a screenshot.")
+        text _("스크린샷 저장")
 
     hbox:
         label "V"
-        text _("Toggles assistive {a=https://www.renpy.org/l/voicing}self-voicing{/a}.")
-
-    hbox:
-        label "Shift+A"
-        text _("Opens the accessibility menu.")
-
+        text _("{a=https://www.renpy.org/l/voicing}대사 읽어주기 기능{/a}.")
 
 screen mouse_help():
 
     hbox:
-        label _("Left Click")
-        text _("Advances dialogue and activates the interface.")
+        label _("좌클릭")
+        text _("대사 진행 및 UI(선택지 포함) 선택.")
 
     hbox:
-        label _("Middle Click")
-        text _("Hides the user interface.")
+        label _("휠 클릭")
+        text _("UI 숨기기.")
 
     hbox:
-        label _("Right Click")
-        text _("Accesses the game menu.")
+        label _("우클릭")
+        text _("게임 메뉴 불러오기.")
 
     hbox:
-        label _("Mouse Wheel Up\nClick Rollback Side")
-        text _("Rolls back to earlier dialogue.")
+        label _("휠 위로\n롤백 클릭")
+        text _("이전 대사로 롤백.")
 
     hbox:
-        label _("Mouse Wheel Down")
-        text _("Rolls forward to later dialogue.")
+        label _("휠 아래로")
+        text _("이후 대사로 롤포워드.")
 
 
 screen gamepad_help():
@@ -1164,8 +1148,8 @@ screen confirm(message, yes_action, no_action):
                 xalign 0.5
                 spacing 150
 
-                textbutton _("Yes") action yes_action
-                textbutton _("No") action no_action
+                textbutton _("예") action yes_action
+                textbutton _("아니오") action no_action
 
     ## Right-click and escape answer "no".
     key "game_menu" action no_action
@@ -1211,7 +1195,7 @@ screen skip_indicator():
         hbox:
             spacing 9
 
-            text _("Skipping")
+            text _("넘기는 중")
 
             text "▸" at delayed_blink(0.0, 1.0) style "skip_triangle"
             text "▸" at delayed_blink(0.2, 1.0) style "skip_triangle"

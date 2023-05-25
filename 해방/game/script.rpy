@@ -3,7 +3,8 @@
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
 
-define e = Character("Eileen")
+define m = Character("나")
+define k = Character("경수")
 
 
 # The game starts here.
@@ -24,9 +25,9 @@ label start:
 
     # These display lines of dialogue.
 
-    e "안돼?"
+    k "안돼?"
 
-    e "Once you add a story, pictures, and music, you can release it to the world!"
+    m "Once you add a story, pictures, and music, you can release it to the world!"
 
     # This ends the game.
 
