@@ -11,6 +11,7 @@ define k = Character("경수")
 
 label start:
 
+    play music "theme.mp3"
     # Show a background. This uses a placeholder by default, but you can
     # add a file (named either "bg room.png" or "bg room.jpg") to the
     # images directory to show it.
@@ -71,9 +72,10 @@ label liberation:
 
     m "잘 하고 와."
 
-    #동전소리 넣어야댐
-
+    play sound "coin.mp3"
     hide ks_normal
+    with dissolve
+
     "그렇게 경수가 동전을 튕겼다."
 
     "10분이 지나도 경수는 돌아오지 않았다."
