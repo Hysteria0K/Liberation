@@ -63,7 +63,9 @@ label prologue:
 
     k "내가 예전에 취미로 모았거든? 버리려고 했는데 그냥 너 가져라."
 
-    "콩고물이 떨어진다. 당장 눈에 띄는 것은 1950년도 외화부터, 몇 개 없다는 1998년 500원까지,"
+    "콩고물이 떨어진다."
+
+    "당장 눈에 띄는 것은 1950년도 외화부터, 몇 개 없다는 1998년 500원까지,"
 
     "다 팔면 꽤나 큰 돈이 될 것 같다."
 
@@ -78,8 +80,125 @@ label prologue:
 
     "그 순간, 눈 앞이 하얘졌다."
 
+    jump year_2002
+
+label year_2002:
+
+    scene black
+    with dissolve
+
+    "무심코 눈을 감았다가, 다시 떴을 때 나는 놀라지 않을 수 없었다."
+
+    scene year_2002_bg
+    with dissolve
+
+    "대~한민국!! 둥둥둥둥둥 대~한민국!!! 둥둥둥둥둥"
+
+    scene year_2002_bg_dark
+
+    "힘들다. 숨이 잘 안 쉬어진다. 속이 울렁거린다."
+
+    "너무 시끄럽고, 사람이 너무 많다. 정신을 차릴 수가 없다."
+
+    scene white
+    with dissolve
+
+    scene room
+    with dissolve
+
+    "이리 치이고 저리 치이다 보니 어느새 경수의 방으로 돌아와 있었다."
+
+    show ks_normal
+
+    k "야 너 뭐냐? 갑자기 사라졌다가 또 갑자기 튀어나왔어."
+
+    k "정체가 뭐야? 초능력자 뭐 그런 건가?"
+
+    m "헉...헉... 잠시만 숨 좀 고르고..."
+
+    "너무 힘들다. 잠깐만 쉬어야겠다."
+    scene black
+    with dissolve
+
+    jump main
+
+label main:
+    
+    scene room
+    with dissolve
+
+    show ks_normal
+
+    k "그래서 방금 그건 뭐였는데?"
+
+    m "그니까 동전을 튕겼는데... 갑자기 눈 앞이 하얘지더니 웬 도로 한복판인거야."
+
+    m "그리고 주변에 사람이 엄청 많았고, 다들 소리를 질러 댔어."
+
+    k "그 동전 어딨냐?"
+
+    "내 손에는 없다. 튕겼으니까 바닥에 떨어졌겠지."
+
+    "아니나 다를까 바닥에 있다."
+
+    #줍는 사운드?
+    "경수가 먼저 주워서, 동전을 살펴본다."
+
+    k "너 혹시 아까 사라졌을 때 사람들이 다 빨간 옷 입고 있었냐?"
+
+    hide ks_normal
+
+    scene year_2002_bg_dark
+    with dissolve
 
 
+    m "그런 것 같기도 하고, 어렴풋이 기억나는 건 응원가가 들렸던 것 같은데... 잘 모르겠다."
+
+    k "그럼 맞네!"
+
+    scene room
+    with dissolve
+
+    show ks_normal
+
+    "경수가 이쪽으로 동전을 보여준다. 별거 아닌 10원인데, 제조연도는 2002년이다."
+
+    k "이거 동전을 튕기면 제조연도로 시간여행 하는거 같은데?"
+
+    m "그래?"
+
+    play sound "coin.mp3"
+
+    m "아무 일도 안 일어나는데?"
+
+    k "다른 동전으로 해봐. 이미 쓴 거는 안 되나 보지."
+
+    menu:
+
+        "비교적 최근 걸로 하자. 그런 경험은 다시하고 싶지 않다."
+
+        "2017년도 동전":
+            jump year_2017
+
+        "2022년도 동전":
+            #여기서 분기점 - 경수 인감, 민증 털기(나중에 담구기 힌트)
+            jump another
+
+label year_2017:
+
+    play sound "coin.mp3"
+
+    scene white
+    with dissolve
+
+    "예후"
+
+
+
+label another:
+    "아직 안만들었음"
+
+    jump year_2017
 label finale: 
     play music "theme.mp3"
     # Show a background. This uses a placeholder by default, but you can
