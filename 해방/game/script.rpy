@@ -38,7 +38,7 @@ label start:
     jump prologue
 
 label prologue:
-    "예"
+    "노트북"
 
 
 label finale: 
