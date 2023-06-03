@@ -10,6 +10,8 @@ define k = Character("경수")
 # The game starts here.
 label start:
 
+    jump year_2017
+
     scene black
 
     "동전을 던지면 경우의 수는 두가지이다."
@@ -175,7 +177,7 @@ label main:
 
     menu:
 
-        "비교적 최근 걸로 하자. 그런 경험은 다시하고 싶지 않다."
+        "비교적 최근 걸로 하자. 그리고 이번엔 익숙한 장소가 나오면 좋겠다."
 
         "2017년도 동전":
             jump year_2017
@@ -191,9 +193,60 @@ label year_2017:
     scene white
     with dissolve
 
-    "예후"
+    "다시 눈 앞이 하얘졌다."
 
+    scene street
+    with dissolve
 
+    "눈을 떴을 때, 익숙한 풍경이 눈 앞에 보였다."
+
+    m "우리 집 근처잖아?"
+
+    "익숙한 장소를 생각해서 그런가?"
+
+    "아 맞다, 타이머 맞춰야지."
+
+    "나는 손목시계의 타이머를 맞췄다. 타이머를 맞춰두면 얼마동안 과거로 가 있는지 알 수 있겠지."
+
+    "어? 잠깐만."
+    
+    "순간 나는 당연하지만 잊고 있던 사실을 하나 떠올렸다."
+
+    "과거를 바꾸면 미래도 바뀌지 않을까?"
+
+    "이걸 어떻게 확인해보지?"
+
+    scene black
+    with dissolve
+
+    scene street
+    with dissolve
+
+    "음, 좋은 생각이 났다."
+
+    "근처 공원으로 가야겠다."
+
+    scene park
+
+    "여기 큰 나무 밑에 돌을 하나 뭍어둬야겠다."
+
+    "원래 시간으로 돌아갔을 때 돌이 그대로 있다면, 과거를 통해 미래를 바꿀 수 있는 거 겠지?"
+
+    m "제발 됐으면 좋겠다..."
+
+    "시간은 얼마나 됐지?"
+
+    "9분 30초?"
+
+    "생각보다 꽤 기네?"
+
+    scene white
+    with dissolve
+
+    scene room
+    with dissolve
+
+    "라고 생각했는데 어느샌가 방으로 돌아왔다."
 
 label another:
     "아직 안만들었음"
