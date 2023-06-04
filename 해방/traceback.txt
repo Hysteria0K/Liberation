@@ -1,28 +1,28 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "renpy/common/00start.rpy", line 275, in script
-    python:
-ScriptError: could not find label 'start'.
+  File "game/script.rpy", line 278, in script
+    with black
+  File "game/script.rpy", line 278, in <module>
+    with black
+NameError: name 'black' is not defined
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "C:\Users\user\Desktop\renpy-8.1.0-sdk\renpy\bootstrap.py", line 275, in bootstrap
-    renpy.main.main()
-  File "C:\Users\user\Desktop\renpy-8.1.0-sdk\renpy\main.py", line 670, in main
-    run(restart)
-  File "C:\Users\user\Desktop\renpy-8.1.0-sdk\renpy\main.py", line 144, in run
-    renpy.execution.run_context(True)
-  File "C:\Users\user\Desktop\renpy-8.1.0-sdk\renpy\execution.py", line 942, in run_context
-    context.run()
-  File "renpy/common/00start.rpy", line 275, in script
-    python:
-  File "C:\Users\user\Desktop\renpy-8.1.0-sdk\renpy\script.py", line 1013, in lookup
-    raise ScriptError("could not find label '%s'." % str(original))
-ScriptError: could not find label 'start'.
+  File "game/script.rpy", line 278, in script
+    with black
+  File "C:\Users\tksth\Desktop\renpy-8.1.0-sdk\renpy\ast.py", line 1671, in execute
+    trans = renpy.python.py_eval(self.expr)
+  File "C:\Users\tksth\Desktop\renpy-8.1.0-sdk\renpy\python.py", line 1153, in py_eval
+    return py_eval_bytecode(code, globals, locals)
+  File "C:\Users\tksth\Desktop\renpy-8.1.0-sdk\renpy\python.py", line 1146, in py_eval_bytecode
+    return eval(bytecode, globals, locals)
+  File "game/script.rpy", line 278, in <module>
+    with black
+NameError: name 'black' is not defined
 
-Windows-10-10.0.19044 AMD64
+Windows-10-10.0.19045 AMD64
 Ren'Py 8.1.0.23051307
 해방 1.0
-Fri Jun  2 17:20:56 2023
+Sun Jun  4 21:34:45 2023

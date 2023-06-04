@@ -1,4 +1,4 @@
-﻿# The script of the game goes in this file.
+# The script of the game goes in this file.
 
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
@@ -248,10 +248,180 @@ label year_2017:
 
     "라고 생각했는데 어느샌가 방으로 돌아왔다."
 
+    jump after_2017
+
 label another:
     "아직 안만들었음"
 
     jump year_2017
+
+label after_2017:
+
+    scene room
+
+    show ks_normal
+
+    k "어! 왔다."
+
+    hide ks_normal
+
+    scene black
+    with dissolve
+
+    "경수에게 2017년에서 했던 일을 설명했다."
+
+    "이동하는 장소는 동전을 튕기기 전 생각한 장소로 이동하는 것 같고,"
+
+    "타이머는 초기화되어 있었지만 대략 10분정도 과거에 머무르는 것 같다."
+
+    "공원에 갔더니 돌도 그 자리에 있었다."
+
+    scene room
+    with dissolve
+
+    show ks_normal
+
+    k "야 진짜 어떻게 이런 일이 있을 수 있냐."
+
+    m "그러게. 이걸로 뭔가 할 수 있을 것 같은데?"
+
+    m "복권을 산다던가, 아니면 코인을 한참 전에 사는 거지."
+
+    m "비트 코인이 발행된 2009년에 매수하는거야."
+
+    k "코인에 돈을 그렇게 잃어 놓고, 아직도 정신을 못 차렸네."
+
+    m "이번에는 성공해야지."
+
+    hide ks_normal
+
+    scene black
+    with dissolve
+
+    jump plan
+
+label plan:
+
+    "나는 계획을 세웠다."
+
+    "코인을 직접 매수하는 것은 불가능하다고 생각했다."
+
+    "현재 사용되는 지폐를 과거로 들고가면 그건 위조 지폐가 되는거니까,"
+
+    "사용자체가 불가능하겠지."
+
+    "따라서 직접 코인을 채굴해야한다."
+
+    "처음에 코인 거래소 계좌를 만들고, 남은 연도 동안 계속해서 채굴하면 어마어마한 양이 모이겠지?"
+
+    "2010년에 코인 거래소가 처음 개설되었으니까, 2011년부터 시작해야 한다."
+
+    "그리고 2021년 대폭락 전에 모든 코인을 팔아버리는거지."
+
+    "2017년도는 이미 사용했기 때문에, 주어진 기회는 9번. 대략 90분이다."
+
+    jump before_2011
+
+label before_2011:
+
+    scene room
+
+    show ks_normal
+
+    k "그럼 이번에는 내가 한다?"
+
+    m "갑자기 경수 니가 한다고?"
+
+    k "안돼?"
+
+    "아. 안된다. 경수를 거스를 수는 없다."
+
+    "경수는 윗면이고, 내가 아랫면이니까."
+
+    "경수가 날 쳐내려고 하면 항상 쳐낼 수 있다."
+
+    "하지만 그 반대는?"
+
+    "상상조차 할 수 없다."
+
+    k "아니 나도 시간 여행은 해봐야지. 너만 좋은 거 하냐?"
+
+    m "그래. 그럼 그렇게 해."
+
+    "나는 경수에게 계획을 설명해줬다."
+
+    "2011년에 계좌 생성."
+
+    "2012년부터 2020년까지 최대한 코인을 채굴한다."
+
+    "...마지막으로 2021년에 전량 매도."
+
+    hide ks_normal
+
+    scene black
+    with dissolve
+
+    scene room
+    with dissolve
+
+    "실수를 하면 안 되니까 예행 연습도 했다."
+
+    "2011년에 우리는 미성년자니까, 우리 명의로는 계좌를 만들 수 없다."
+
+    "따라서 계좌 생성을 위한 명의는 경수의 부모님 것으로 하기로 했다."
+
+    show ks_normal
+
+    "난 경수에게 2011년도 100원을 줬다."
+
+    m "잘해."
+
+    k "...알아서 할게."
+
+    play sound "coin.mp3"
+
+    scene white
+    with dissolve
+
+    "경수가 동전을 튕겼다."
+
+    scene room
+    with dissolve
+
+    "경수가 사라졌다."
+
+    "솔직히 말해서 좀 걱정이다."
+
+    "경수는 별로 계획에 관심이 없는 것 같다."
+
+    "애초에 돈도 많은 애가 굳이 내 계획을 따라줄 필요가 있을까?"
+
+    scene black
+    with dissolve
+
+    "10분이 지나고 경수가 돌아왔다."
+
+    jump after_2011
+
+label after_2011:
+    scene room
+    with dissolve
+
+    show ks_normal
+
+    k "실패했어."
+
+    m "왜?"
+
+    k "주변에 컴퓨터가 없잖아. 그리고 폰도 인터넷 접속이 안돼."
+
+    "맞다. 깜빡하고 있었다. 계획을 바꿔야 한다."
+
+    scene black
+    with dissolve
+
+
+
 label finale: 
     play music "theme.mp3"
     # Show a background. This uses a placeholder by default, but you can
