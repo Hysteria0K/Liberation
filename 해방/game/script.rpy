@@ -12,7 +12,7 @@ default chance = 3
 # The game starts here.
 label start:
 
-    jump year_2014
+    #jump after_2018
 
     scene black
 
@@ -561,7 +561,7 @@ label after_2007:
 
     "코인 채굴."
 
-    "2023년도의 최신형 게이밍 노트북이기 때문에,"
+    "2023년 최신형 게이밍 노트북이기 때문에,"
 
     "10년도의 데스크탑보다 성능이 월등히 좋다."
 
@@ -705,7 +705,6 @@ label year_2014_choice_3:
 
             "아, 거래소를 켜버렸네."
             "한창 매매할 때는 컴퓨터 키면 무조건 거래소부터 켰었지..."
-            "정신차리자."
 
             if chance == 1:
                 "시간 상 다음 번이 마지막 기회일 것 같다."
@@ -858,16 +857,113 @@ label after_2018:
 
 label year_2019:
 
+    scene storage
+    with dissolve
 
+    "역시... 그럼 그렇지."
 
-    
+    "아니나 다를까 노트북이 꺼져있다."
 
-    
+    "전원 버튼을 눌러봤지만 노트북은 켜지지 않는다."
 
+    "드디어 고장이 나버렸다."
 
+    "다음 계획을 세워야겠다."
 
+    scene black
+    with dissolve
 
+    "2020년에 스마트폰 용 코인 거래소 어플이 출시됐으니까,"
 
+    "2020년으로 가서 공유기를 설치하면 인터넷이 되겠지?"
+
+    "그리고 2021년으로 가서 어플을 설치하고 코인을 싹 다 팔면 될 것 같다."
+
+    "다만 어플을 설치하고, 계좌를 연결하고, 코인을 파는 것까지."
+
+    "전부 다 하려면 시간이 너무 촉박할 것 같다."
+
+    scene white
+    with dissolve
+
+    "실수를 하면 안 될 것 같다."
+
+    jump after_2019
+
+label after_2019:
+
+    scene storage
+    with dissolve
+
+    "나는 창고로 돌아와서 계획을 경수에게 설명했다."
+
+    show ks_normal
+
+    k "그러면 공유기 설치는 너가 하고, 코인을 내가 팔게."
+
+    "뭐라고? 안돼. 절대 안돼."
+
+    "이번에는 실수하면 기회가 없다고."
+
+    "라는 말이 입에 맴돌지만 절대로 밖으로 나오지 않는다."
+
+    "한심하다."
+
+    "나는 이런 상황에서도 경수의 눈치를 볼 수밖에 없는 것이다."
+
+    m "알았어."
+
+    "결국 알겠다고 해버렸다."
+
+    k "공유기는 창고에 있는 거 저거 쓰면 될거야."
+
+    scene black
+    with dissolve
+
+    "이제 어떻게 하지...?"
+
+    "솔직히 경수에게 맡기면 실패할 것 같다."
+
+    "아니, 무조건 실패한다."
+
+    "어떻게 해야하지?"
+
+    "모르겠다. 일단 공유기부터 설치하고 생각해야겠다."
+
+    play sound "coin.mp3"
+
+    scene white
+    with dissolve
+
+    "공유기를 챙겨서 2020년도 동전을 튕겼다."
+
+    jump year_2020
+
+label year_2020:
+
+    scene storage
+    with dissolve
+
+    "우선 공유기부터 설치하자."
+
+    scene black
+    with dissolve
+
+    "계획대로 공유기를 설치했다."
+
+    "남는 시간동안 웃긴 사실이 떠올랐다."
+
+    "결국 2021년에 140개 이상의 코인을 팔아버렸으니까,"
+
+    "그런 대폭락이 발생한게 아닐까?"
+
+    "내 티끌만한 돈도 앗아간 대폭락이,"
+
+    "결국 내가 계획한 일이라는 거잖아?"
+
+    "나는 혼자 한참을 웃었다."
+
+    jump finale
 
 label finale: 
     play music "theme.mp3"
@@ -876,6 +972,7 @@ label finale:
     # images directory to show it.
 
     scene storage
+    with dissolve
 
     # This shows a character sprite. A placeholder is used, but you can
     # replace it by adding a file named "eileen happy.png" to the images
@@ -932,7 +1029,11 @@ label liberation:
     m "잘 하고 와."
 
     play sound "coin.mp3"
-    hide ks_normal
+
+    scene white
+    with dissolve
+
+    scene storage
     with dissolve
 
     "그렇게 경수가 동전을 튕겼다."
