@@ -2,17 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 78: expected statement.
-    coin
-        ^
-
-File "game/script.rpy", line 172: expected statement.
-    coin
-        ^
-
-File "game/script.rpy", line 191: expected statement.
-    coin
-        ^
+File "game/script.rpy", line 638: expected menuitem
+    if chance <= 0:
+    ^
 
 Ren'Py Version: Ren'Py 8.1.0.23051307
-Fri Jun  2 18:05:36 2023
+Tue Jun  6 16:53:23 2023
