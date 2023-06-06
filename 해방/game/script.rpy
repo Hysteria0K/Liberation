@@ -654,7 +654,7 @@ label year_2014_choice_1:
             if chance == 1:
                 "시간 상 다음 번이 마지막 기회일 것 같다."
                 "한 번만 더 실수하면 끝이야."
-            else:
+            elif chance != 0:
                 "후... 다시 집중하자. 기회는 많지 않다."
 
             $ chance -= 1
@@ -677,7 +677,7 @@ label year_2014_choice_2:
             if chance == 1:
                 "시간 상 다음 번이 마지막 기회일 것 같다."
                 "한 번만 더 실수하면 끝이야."
-            else:
+            elif chance != 0:
                 "후... 다시 집중하자. 기회는 많지 않다."
     
             $ chance -= 1
@@ -710,13 +710,16 @@ label year_2014_choice_3:
             if chance == 1:
                 "시간 상 다음 번이 마지막 기회일 것 같다."
                 "한 번만 더 실수하면 끝이야."
-            else:
+            elif chance != 0:
                 "후... 다시 집중하자. 기회는 많지 않다."
             $ chance -= 1
+
             jump year_2014_choice_3
 
 label year_2014_fail:
     "실패"
+
+    return
 
 label year_2014_complete:
 
@@ -838,7 +841,7 @@ label after_2018:
 
     m "재밌어서 그래."
 
-    "절대로 내가 화내면 안된다."
+    "절대로 화내면 안된다."
 
     "참아야한다. 계획만 성공하면 된다."
 
