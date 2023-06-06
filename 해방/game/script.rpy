@@ -10,7 +10,7 @@ define k = Character("경수")
 # The game starts here.
 label start:
 
-    jump year_2017
+    jump after_2011
 
     scene black
 
@@ -417,10 +417,128 @@ label after_2011:
 
     "맞다. 깜빡하고 있었다. 당연히 폰은 못쓰지."
 
-    "계획을 바꿔야 한다."
+    m "계획을 좀 바꿔야겠어."
 
     scene black
     with dissolve
+
+    scene room
+    with dissolve
+
+    m "노트북을 2007년으로 가서 숨겨놓는 건 어때?"
+
+    k "우리 집 창고에다가 숨겨놓자. 거기 아무도 안 써."
+
+    m "그러면 일단 창고로 가보자."
+
+    k "그래. 동전 챙겨라."
+
+    #move sound
+
+    scene black
+    with dissolve
+
+    scene storage
+    with dissolve
+
+    m "콘센트도 있고, 인터넷 선도 있네?"
+
+    show ks_normal
+
+    k "옛날부터 있었을거야."
+
+    m "그러면 노트북을 2007년에 여기다 숨기고, 인터넷이 되나 확인해보자."
+
+    m "그리고 2012년에 거래소 계좌를 만들면 될 것 같아."
+
+    k "좋아, 해보자고."
+
+    play sound "coin.mp3"
+
+    scene white
+    with dissolve
+
+    "경수가 2007년도 동전을 튕겼다."
+
+    scene storage
+    with dissolve
+
+    "걱정이 된다..."
+
+    "그래도 노트북만 두고 오면 되는거니까 이번엔 잘하겠지?"
+
+    scene black
+    with dissolve
+
+    "10분이 지나고 경수가 돌아왔다."
+
+    jump after_2007
+
+label after_2007:
+
+    scene storage
+
+    show ks_normal
+
+    k "잘 숨겨놓고 왔어."
+
+    m "인터넷은 잘 돼?"
+
+    k "어. 콘센트 전원도 들어오더라."
+
+    m "좋아. 그럼 바로 2012년으로 가자."
+
+    m "가서 계좌만 만들면 돼."
+
+    "나는 경수에게 2012년도 동전을 건넸다."
+
+    k "근데 조금만 쉬었다가 할까?"
+
+    "아. 제발. 대체 왜 그러는 거야."
+
+    m "힘들면 그냥 내가 할게."
+
+    k "왜 그렇게 재촉하냐?"
+
+    k "누가 훔쳐 가기라도 할 거 같애?"
+
+    m "그냥 마음이 급해서 그래."
+
+    k "천천히 해. 느긋하게."
+
+    show black
+    with dissolve
+
+    "그래. 넌 느긋하겠지."
+
+    "어차피 돈은 썩을대로 넘쳐나니까."
+
+    "하지만 난 아냐."
+
+    "이번 기회를 놓치면 난 평생 후회하겠지."
+
+    "절대로 실패하면 안되는 일이라고."
+
+    play sound "coin.mp3"
+
+    scene white
+    with dissolve
+
+    scene storage
+    with dissolve
+
+    "뭐야?"
+
+    "지금 말도 안하고 간거야?"
+
+    "하... 이젠 완전히 제멋대로잖아?"
+
+    "하긴 나한테 굳이 말해야 된다고 생각하지도 않겠지."
+
+    "이젠 슬슬 화가난다."
+
+
+
 
 
 
@@ -430,7 +548,7 @@ label finale:
     # add a file (named either "bg room.png" or "bg room.jpg") to the
     # images directory to show it.
 
-    scene room
+    scene storage
 
     # This shows a character sprite. A placeholder is used, but you can
     # replace it by adding a file named "eileen happy.png" to the images
@@ -439,7 +557,7 @@ label finale:
 
     # These display lines of dialogue.
 
-    "경수의 방으로 돌아왔다. 이젠 정말 마지막이다."
+    "창고로 돌아왔다. 이젠 정말 마지막이다."
 
     show ks_normal
 
@@ -468,7 +586,7 @@ label finale:
 
 label liberation:
     
-    scene room
+    scene storage
 
     show ks_normal
 
