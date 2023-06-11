@@ -48,8 +48,12 @@ label prologue:
 
     k "야, 다시 생각해봐도 말이 안 되지 않냐?"
 
-    # 속 마음 얘기할 때 경수 약간 채도 낮춰서 하면 좋을 거 같음
+    hide ks_normal
+    show ks_dark
     "또 그 소리, 뭘 잘못 먹었는지 1년전부터 계속 이 얘기를 한다."
+
+    hide ks_dark
+    show ks_normal
 
     k "아니 집에 도둑이 들어와서 내 인감이랑 민증을 들고 나가는 걸 똑똑히 봤거든?"
 
@@ -57,7 +61,13 @@ label prologue:
 
     m "잘못 본 거겠지. 꿈이라도 꾼 거 아니야?"
 
+    hide ks_normal
+    show ks_dark
+
     "그냥 적당히 받아주고 넘어가자. 괜히 신경 거슬려서 좋을 게 없다."
+
+    hide ks_dark
+    show ks_normal
 
     k "하... 아니다. 됐고, 이거나 받아라."
 
@@ -67,11 +77,16 @@ label prologue:
 
     k "내가 예전에 취미로 모았거든? 버리려고 했는데 그냥 너 가져라."
 
+    hide ks_normal
+    show ks_dark
+
     "콩고물이 떨어진다."
 
     "당장 눈에 띄는 것은 1950년도 외화부터, 몇 개 없다는 1998년 500원까지,"
 
     "다 팔면 꽤나 큰 돈이 될 것 같다."
+
+    hide ks_dark
 
     m "아니 뭘 이런 걸 다 주냐."
 
@@ -120,6 +135,9 @@ label year_2002:
 
     m "헉...헉... 잠시만 숨 좀 고르고..."
 
+    hide ks_normal
+    show ks_dark
+
     "너무 힘들다. 잠깐만 쉬어야겠다."
     scene black
     with dissolve
@@ -141,12 +159,18 @@ label main:
 
     k "그 동전 어딨냐?"
 
+    hide ks_normal
+    show ks_dark   
+
     "내 손에는 없다. 튕겼으니까 바닥에 떨어졌겠지."
 
     "아니나 다를까 바닥에 있다."
 
     #줍는 사운드?
     "경수가 먼저 주워서, 동전을 살펴본다."
+
+    hide ks_dark
+    show ks_normal
 
     k "너 혹시 아까 사라졌을 때 사람들이 다 빨간 옷 입고 있었냐?"
 
@@ -177,6 +201,8 @@ label main:
 
     k "다른 동전으로 해봐. 이미 쓴 거는 안 되나 보지."
 
+    hide ks_normal
+    show ks_dark
 
     "비교적 최근이 좋겠어. 그리고 이번엔 익숙한 장소가 나오면 좋겠다."
 
