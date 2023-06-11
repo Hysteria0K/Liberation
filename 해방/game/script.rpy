@@ -110,7 +110,7 @@ label year_2002:
     scene room
     with dissolve
 
-    "이리 치이고 저리 치이다 보니 어느새 경수의 방으로 돌아와 있었다."
+    "이리 치이고 저리 치이다 보니 어느새 방으로 돌아와 있었다."
 
     show ks_normal
 
@@ -177,16 +177,12 @@ label main:
 
     k "다른 동전으로 해봐. 이미 쓴 거는 안 되나 보지."
 
-    menu:
 
-        "비교적 최근 걸로 하자. 그리고 이번엔 익숙한 장소가 나오면 좋겠다."
+    "비교적 최근이 좋겠어. 그리고 이번엔 익숙한 장소가 나오면 좋겠다."
 
-        "2017년도 동전":
-            jump year_2017
+    "2017년이 적당하겠다."
+    jump year_2017
 
-        "2022년도 동전":
-            #여기서 분기점 - 경수 인감, 민증 털기(나중에 담구기 힌트)
-            jump another
 
 label year_2017:
 
@@ -251,11 +247,6 @@ label year_2017:
     "라고 생각했는데 어느샌가 방으로 돌아왔다."
 
     jump after_2017
-
-label another:
-    "아직 안만들었음"
-
-    jump year_2017
 
 label after_2017:
 
@@ -716,7 +707,14 @@ label year_2014_choice_3:
             jump year_2014_choice_3
 
 label year_2014_fail:
-    "실패"
+
+    "아!!!"
+    
+    scene white
+    with dissolve
+    
+    scene storage
+    with dissolve
 
     return
 
@@ -970,6 +968,9 @@ label finale:
     # Show a background. This uses a placeholder by default, but you can
     # add a file (named either "bg room.png" or "bg room.jpg") to the
     # images directory to show it.
+
+    scene white
+    with dissolve
 
     scene storage
     with dissolve
