@@ -12,7 +12,7 @@ default chance = 3
 # The game starts here.
 label start:
 
-    #jump after_2018
+    jump year_2014
 
     scene black
 
@@ -734,13 +734,94 @@ label year_2014_choice_3:
 
 label year_2014_fail:
 
-    "아!!!"
-    
     scene white
     with dissolve
     
     scene storage
     with dissolve
+
+    "아!!!"
+
+    show ks_normal
+
+    k "성공했어?"
+
+    m "아니."
+
+    k "뭐야, 못 했어?"
+
+    m "실수를 좀 많이 했어."
+
+    m "다음 번에는 꼭 성공해야지."
+
+    k "또 니가 가게?"
+
+    k "이번에는 내 차례지."
+
+    m "뭐? 이젠 기회가 몇 번 안 남았어."
+
+    m "절대로 실수하면 안 된다고. 니가 가면 안 돼."
+
+    show ks_angry
+
+    k "내가 무조건 실수할 것처럼 말을 하네?"
+
+    "아차."
+
+    k "그렇게 중요한 일이었으면 니가 처음부터 성공했어야지."
+
+    k "그리고 니가 못 했으면 나도 못 할 수도 있는거 아니냐?"
+
+    k "하... 됐다."
+
+    k "야, 나가."
+
+    m "...어?"
+
+    k "못 들었어? 꺼지라고."
+
+    m "알겠어."
+
+    hide ks_angry
+
+    scene black
+    with dissolve
+
+    "급하게 나오느라 아무 것도 챙기지 못했다."
+
+    "동전을 챙겨나왔어야 했는데."
+
+    "지금이라도 가서 동전이라도 달라고 할까?"
+
+    "..."
+
+    "생각해보니 더 이상 경수 밑에 못 붙어있겠네."
+
+    "...하"
+
+    "거기서 실수만 안 했으면 됐을텐데."
+
+    scene white
+    with dissolve
+
+    "일주일 뒤"
+
+    scene black
+    with dissolve
+
+    "몇 일이 지나도 경수는 전화를 받지 않는다."
+
+    "직접 찾아가도 반응도 없다."
+
+    "아무래도 난 버림받은 것 같다."
+
+    "한 순간의 실수로 인생 역전의 기회를 놓쳐버렸다."
+
+    "경수도 이젠 나와 아무 관계도 아니다."
+
+    "이젠 나한테 남은 게 없다."
+
+    "{b}버려짐{/b}."
 
     return
 
