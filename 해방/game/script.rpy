@@ -493,9 +493,6 @@ label after_2011:
 
     play sound "coin.mp3"
 
-    hide ks_normal
-    with dissolve
-
     scene white
     with dissolve
 
@@ -682,7 +679,7 @@ label after_2007:
 
 label year_2014:
 
-    scene storage
+    scene storage_past
     with dissolve
 
     "일단 타이머부터 맞추자."
@@ -946,7 +943,7 @@ label year_2014_after:
 
 label year_2018:
 
-    scene storage
+    scene storage_past
     with dissolve
 
     "역시나."
@@ -1021,7 +1018,7 @@ label after_2018:
 
 label year_2019:
 
-    scene storage
+    scene storage_past
     with dissolve
 
     "역시... 그럼 그렇지."
@@ -1087,10 +1084,10 @@ label after_2019:
 
     k "공유기는 창고에 있는 거 저거 쓰면 될거야."
 
-    scene black
-    with dissolve
+    show ks_dark
+    hide ks_normal
 
-    "이제 어떻게 하지...?"
+    "흠..."
 
     "솔직히 경수에게 맡기면 실패할 것 같다."
 
@@ -1111,7 +1108,7 @@ label after_2019:
 
 label year_2020:
 
-    scene storage
+    scene storage_past
     with dissolve
 
     "우선 공유기부터 설치하자."
