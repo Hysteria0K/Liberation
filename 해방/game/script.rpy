@@ -12,7 +12,7 @@ default chance = 3
 # The game starts here.
 label start:
 
-    jump year_2014
+    #jump year_2014
 
     scene black
 
@@ -353,6 +353,9 @@ label before_2011:
 
     k "안돼?"
 
+    hide ks_normal
+    show ks_dark
+
     "아. 안된다. 경수를 거스를 수는 없다."
 
     "경수는 윗면이고, 내가 아랫면이니까."
@@ -363,9 +366,15 @@ label before_2011:
 
     "상상조차 할 수 없다."
 
+    show ks_normal
+    hide ks_dark
+
     k "아니 나도 시간 여행은 해봐야지. 너만 좋은 거 하냐?"
 
     m "그래. 그럼 그렇게 해."
+
+    show ks_dark
+    hide ks_normal
 
     "나는 경수에게 계획을 설명해줬다."
 
@@ -375,7 +384,7 @@ label before_2011:
 
     "...마지막으로 2021년에 전량 매도."
 
-    hide ks_normal
+    hide ks_dark
 
     scene black
     with dissolve
@@ -434,15 +443,25 @@ label after_2011:
 
     k "주변에 컴퓨터가 없었어. 그리고 폰도 인터넷 접속이 안돼."
 
+    hide ks_normal
+    show ks_dark
+
     "맞다. 깜빡하고 있었다. 당연히 폰은 못쓰지."
 
+    show ks_normal
+    hide ks_dark
+
     m "계획을 좀 바꿔야겠어."
+
+    hide ks_normal
 
     scene black
     with dissolve
 
     scene room
     with dissolve
+
+    show ks_normal
 
     m "노트북을 2007년으로 가서 숨겨놓는 건 어때?"
 
@@ -473,6 +492,9 @@ label after_2011:
     k "좋아, 해보자고."
 
     play sound "coin.mp3"
+
+    hide ks_normal
+    with dissolve
 
     scene white
     with dissolve
@@ -509,11 +531,23 @@ label after_2007:
 
     m "가서 계좌만 만들면 돼."
 
+    hide ks_normal
+    show ks_dark
+
     "나는 경수에게 2012년도 동전을 건넸다."
+
+    show ks_normal
+    hide ks_dark
 
     k "조금만 쉬었다가 할까?"
 
+    show ks_dark
+    hide ks_normal
+
     "아. 제발. 대체 왜 그러는 거야."
+
+    show ks_normal
+    hide ks_dark
 
     m "힘들면 그냥 내가 할게."
 
@@ -576,6 +610,9 @@ label after_2007:
 
     k "그러시던가."
 
+    show ks_dark
+    hide ks_normal
+
     "코인 채굴."
 
     "2023년 최신형 게이밍 노트북이기 때문에,"
@@ -603,14 +640,24 @@ label after_2007:
     m "2013년도가 없는데?"
 
     show ks_normal
+    hide ks_dark
 
     k "없으면 없는 거야. 항상 모으진 않았으니까."
 
+    show ks_dark
+    hide ks_normal
+
     "아. 이런 젠장. 기회가 또 한 번 줄었다."
+
+    show ks_normal
+    hide ks_dark
 
     k "야, 표정이 왜 그렇냐?"
 
     m "아니야."
+
+    show ks_dark
+    hide ks_normal
 
     "다행히 14년부터는 동전이 다 있다."
 
@@ -797,7 +844,7 @@ label year_2014_fail:
 
     "생각해보니 더 이상 경수 밑에 못 붙어있겠네."
 
-    "...하"
+    "...하."
 
     "거기서 실수만 안 했으면 됐을텐데."
 
@@ -883,6 +930,9 @@ label year_2014_after:
 
     k "그래. 난 좀 쉬어야겠다."
 
+    show ks_dark
+    hide ks_normal
+
     "다행이다. 중요한 일은 너한테 못 맡기겠거든."
 
     "나는 2018년도 평창 동계 올림픽 기념 주화를 튕겼다."
@@ -939,11 +989,20 @@ label after_2018:
 
     k "느긋하게 하라니까, 성질 급하기는."
 
+    show ks_dark
+    hide ks_normal
+
     "하... 왜 시비지?"
 
     "도움도 안 될거면 가만히라도 있던가."
 
+    show ks_normal
+    hide ks_dark
+
     m "재밌어서 그래."
+
+    show ks_dark
+    hide ks_normal
 
     "절대로 화내면 안된다."
 
@@ -1006,6 +1065,9 @@ label after_2019:
 
     k "그러면 공유기 설치는 너가 하고, 코인을 내가 팔게."
 
+    show ks_dark
+    hide ks_normal
+
     "뭐라고? 안돼. 절대 안돼."
 
     "이번에는 실수하면 기회가 없다고."
@@ -1019,6 +1081,9 @@ label after_2019:
     m "알았어."
 
     "결국 알겠다고 해버렸다."
+
+    show ks_normal
+    hide ks_dark
 
     k "공유기는 창고에 있는 거 저거 쓰면 될거야."
 
@@ -1120,11 +1185,14 @@ label liberation:
     
     scene storage
 
-    show ks_normal
+    show ks_dark
 
     "나는 웃으며 말했다."
 
     m "이러는 편이 긴장감 있고 재밌잖아."
+
+    show ks_normal
+    hide ks_dark
 
     k "어?"
 
@@ -1132,7 +1200,13 @@ label liberation:
 
     k "그래, 재밌게 하자고."
 
+    show ks_dark
+    hide ks_normal
+
     "나는 경수에게 백악관이 그려진 면이 위쪽으로 가게 동전을 손에 쥐여주었다."
+
+    show ks_normal
+    hide ks_dark
 
     m "잘 하고 와."
 
@@ -1160,11 +1234,14 @@ label liberation:
 
 label slave:
 
-    scene room
+    scene storage
 
     show ks_normal
 
     m "아니야. 잘하고 와."
+
+    show ks_dark
+    hide ks_normal
 
     "나는 경수에게 2021년도 100원을 주고 말았다."
 
