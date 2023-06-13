@@ -18,7 +18,7 @@ label start:
 
     scene black
 
-    "동전을 던지면 경우의 수는 두가지이다."
+    "동전을 던지면 경우의 수는 두 가지이다."
 
     "한 면은 위로 가고, 다른 한 면은 바닥에 깔리겠지."
 
@@ -197,6 +197,8 @@ label main:
     with dissolve
 
     show ks_normal
+
+    play sound "pick.mp3"
 
     "경수가 이쪽으로 동전을 보여준다. 별거 아닌 10원인데, 제조연도는 2002년이다."
 
@@ -1239,7 +1241,7 @@ label finale:
     hide ks_normal
     show ks_angry
 
-    k "하...진짜 알겠다니까 왜 이렇게 보채? 이게 그렇게 중요해?"
+    k "하...진짜 알겠다니까. 왜 이렇게 보채? 이게 그렇게 중요해?"
 
     hide ks_angry
     show ks_angry_dark
