@@ -12,7 +12,7 @@ default chance = 3
 # The game starts here.
 label start:
 
-    #jump finale
+    jump year_2014
 
     scene black
 
@@ -709,6 +709,8 @@ label after_2007:
 
 label year_2014:
 
+    play music "dizzy.mp3" fadein 1.5
+
     scene storage_past
     with dissolve
 
@@ -810,11 +812,15 @@ label year_2014_choice_3:
 
 label year_2014_fail:
 
+    stop music fadeout 1.5
+
     scene white
     with dissolve
     
     scene storage
     with dissolve
+
+    play music "highnoon.mp3" fadein 1.5
 
     "아!!!"
 
@@ -839,6 +845,7 @@ label year_2014_fail:
     m "절대로 실수하면 안 된다고. 니가 가면 안 돼."
 
     show ks_angry
+    hide ks_normal
 
     k "내가 무조건 실수할 것처럼 말을 하네?"
 
@@ -904,6 +911,8 @@ label year_2014_fail:
     "경수도 이젠 나와 아무 관계도 아니다."
 
     "이젠 나한테 남은 게 없다."
+
+    stop music fadeout 1.5
 
     "{b}버려짐{/b}."
 
@@ -1184,12 +1193,14 @@ label year_2020:
 
     "결국 내가 계획한 일이라는 거잖아?"
 
+    stop music fadeout 1.5
+
     "나는 혼자 한참을 웃었다."
 
     jump finale
 
 label finale: 
-    play music "theme.mp3"
+    play music "theme.mp3" fadein 1.5
     # Show a background. This uses a placeholder by default, but you can
     # add a file (named either "bg room.png" or "bg room.jpg") to the
     # images directory to show it.
@@ -1287,7 +1298,10 @@ label liberation:
     scene black
     with dissolve
 
+    stop music fadeout 1.5
+
     "{b}해방{/b}."
+
     return
 
 label slave:
@@ -1314,6 +1328,8 @@ label slave:
     "애초에 경수가 동전을 주지 않았다면 없었던 일이었다."
 
     "라고 정신승리라도 해야겠다."
+
+    stop music fadeout 1.5
 
     "{b}노예{/b}."
     return
