@@ -1,28 +1,40 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
-While running game code:
-  File "game/script.rpy", line 278, in script
-    with black
-  File "game/script.rpy", line 278, in <module>
-    with black
-NameError: name 'black' is not defined
+After initialization, but before game start.
+  File "renpy/common/00start.rpy", line 83, in _init_language
+    renpy.change_language(language)
+  File "game/screens.rpy", line 526, in <module>
+    color BLACK#gui.accent_color
+NameError: name 'BLACK' is not defined
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 278, in script
-    with black
-  File "C:\Users\tksth\Desktop\renpy-8.1.0-sdk\renpy\ast.py", line 1671, in execute
-    trans = renpy.python.py_eval(self.expr)
+  File "C:\Users\tksth\Desktop\renpy-8.1.0-sdk\renpy\bootstrap.py", line 275, in bootstrap
+    renpy.main.main()
+  File "C:\Users\tksth\Desktop\renpy-8.1.0-sdk\renpy\main.py", line 670, in main
+    run(restart)
+  File "C:\Users\tksth\Desktop\renpy-8.1.0-sdk\renpy\main.py", line 74, in run
+    renpy.translation.init_translation()
+  File "C:\Users\tksth\Desktop\renpy-8.1.0-sdk\renpy\translation\__init__.py", line 593, in init_translation
+    renpy.store._init_language() # type: ignore
+  File "renpy/common/00start.rpy", line 83, in _init_language
+    renpy.change_language(language)
+  File "C:\Users\tksth\Desktop\renpy-8.1.0-sdk\renpy\translation\__init__.py", line 685, in change_language
+    new_change_language(tl, language)
+  File "C:\Users\tksth\Desktop\renpy-8.1.0-sdk\renpy\translation\__init__.py", line 639, in new_change_language
+    i.apply()
+  File "C:\Users\tksth\Desktop\renpy-8.1.0-sdk\renpy\ast.py", line 2974, in apply
+    value = renpy.python.py_eval(expr)
   File "C:\Users\tksth\Desktop\renpy-8.1.0-sdk\renpy\python.py", line 1153, in py_eval
     return py_eval_bytecode(code, globals, locals)
   File "C:\Users\tksth\Desktop\renpy-8.1.0-sdk\renpy\python.py", line 1146, in py_eval_bytecode
     return eval(bytecode, globals, locals)
-  File "game/script.rpy", line 278, in <module>
-    with black
-NameError: name 'black' is not defined
+  File "game/screens.rpy", line 526, in <module>
+    color BLACK#gui.accent_color
+NameError: name 'BLACK' is not defined
 
 Windows-10-10.0.19045 AMD64
 Ren'Py 8.1.0.23051307
 해방 1.0
-Sun Jun  4 21:34:45 2023
+Wed Jun 14 05:05:33 2023

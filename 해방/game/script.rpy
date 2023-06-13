@@ -14,7 +14,7 @@ label start:
 
     #jump year_2014
 
-    play music "calm.mp3" fadein 1.5
+    #play music "calm.mp3" fadein 1.5
 
     scene black
 

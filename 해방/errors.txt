@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 638: expected menuitem
-    if chance <= 0:
-    ^
+File "game/screens.rpy", line 526: end of line expected.
+    color color "#000000"
+                ^
 
 Ren'Py Version: Ren'Py 8.1.0.23051307
-Tue Jun  6 16:53:23 2023
+Wed Jun 14 05:07:14 2023
