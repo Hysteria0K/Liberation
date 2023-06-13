@@ -73,6 +73,8 @@ label prologue:
 
     "경수가 서랍장에서 고급스럽게 생긴 상자를 꺼내서 준다."
 
+    play sound "take.mp3"
+
     "열어보니 동전들이 굉장히 많다."
 
     k "내가 예전에 취미로 모았거든? 버리려고 했는데 그냥 너 가져라."
@@ -166,7 +168,8 @@ label main:
 
     "아니나 다를까 바닥에 있다."
 
-    #줍는 사운드?
+    play sound "pick.mp3"
+
     "경수가 먼저 주워서, 동전을 살펴본다."
 
     hide ks_dark
@@ -206,6 +209,8 @@ label main:
 
     "비교적 최근이 좋겠어. 그리고 이번엔 익숙한 장소가 나오면 좋겠다."
 
+    play sound "pick.mp3"
+
     "2017년이 적당하겠다."
     jump year_2017
 
@@ -230,6 +235,8 @@ label year_2017:
 
     "아 맞다, 타이머 맞춰야지."
 
+    play sound "pick.mp3"
+
     "나는 손목시계의 타이머를 맞췄다. 타이머를 맞춰두면 얼마동안 과거로 가 있는지 알 수 있겠지."
 
     "어? 잠깐만."
@@ -250,9 +257,19 @@ label year_2017:
 
     "근처 공원으로 가야겠다."
 
-    scene park
+    play sound "move.mp3"
 
-    "여기 나무 두 그루 사이에 돌을 하나 뭍어둬야겠다."
+    scene black
+    with dissolve
+
+    scene park
+    with dissolve
+
+    "공원에 도착했다."
+
+    "적당히 눈에 띄는 장소가..."
+
+    "저기 두 나무 사이에 돌을 뭍어둬야겠다."
 
     "원래 시간으로 돌아갔을 때 돌이 그대로 있다면, 과거를 통해 미래를 바꿀 수 있는 거 겠지?"
 
@@ -370,7 +387,7 @@ label before_2011:
     "상상조차 할 수 없다."
 
     show ks_normal
-    hide ks_dark
+    hide ks_angry_dark
 
     k "아니 나도 시간 여행은 해봐야지. 너만 좋은 거 하냐?"
 
@@ -402,6 +419,8 @@ label before_2011:
     "따라서 계좌 생성을 위한 명의는 경수의 부모님 것으로 하기로 했다."
 
     show ks_normal
+
+    play sound "pick.mp3"
 
     "난 경수에게 2011년도 100원을 줬다."
 
@@ -477,7 +496,7 @@ label after_2011:
 
     k "그래. 동전 챙겨라."
 
-    #move sound
+    play sound "move.mp3"
 
     scene black
     with dissolve
@@ -536,6 +555,8 @@ label after_2007:
 
     hide ks_normal
     show ks_dark
+
+    play sound "pick.mp3"
 
     "나는 경수에게 2012년도 동전을 건넸다."
 
@@ -693,11 +714,13 @@ label year_2014:
 
     "일단 타이머부터 맞추자."
 
+    play sound "pick.mp3"
+
     "타이머를 10분으로 설정했다."
 
     "빨리 해야겠다."
 
-    #꺼내는 사운드
+    play sound "take.mp3"
 
     "노트북에 인터넷 선을 연결하고, 전원 선도 연결했다."
 
@@ -841,6 +864,8 @@ label year_2014_fail:
 
     m "...알겠어."
 
+    play sound "move.mp3"
+
     hide ks_angry
 
     scene black
@@ -947,6 +972,8 @@ label year_2014_after:
 
     "다행이다. 중요한 일은 너한테 못 맡기겠거든."
 
+    play sound "pick.mp3"
+
     "나는 2018년도 평창 동계 올림픽 기념 주화를 튕겼다."
 
     play sound "coin.mp3"
@@ -960,6 +987,10 @@ label year_2018:
 
     scene storage_past
     with dissolve
+
+    play sound "take.mp3"
+
+    "..."
 
     "역시나."
 
@@ -995,6 +1026,8 @@ label after_2018:
     scene storage
     with dissolve
 
+    play sound "take.mp3"
+
     "나는 돌아오자마자 2019년도 동전을 찾아서 상자를 뒤졌다."
 
     show ks_normal
@@ -1020,6 +1053,8 @@ label after_2018:
 
     "참아야한다. 계획만 성공하면 된다."
 
+    play sound "pick.mp3"
+
     "동전은... 여기있었네."
 
     "나는 바로 2019년도 동전을 튕겼다."
@@ -1035,6 +1070,8 @@ label year_2019:
 
     scene storage_past
     with dissolve
+
+    play sound "take.mp3"
 
     "역시... 그럼 그렇지."
 
@@ -1110,6 +1147,8 @@ label after_2019:
 
     "어떻게 해야하지?"
 
+    play sound "take.mp3"
+
     "모르겠다. 일단 공유기부터 설치하고 생각해야겠다."
 
     play sound "coin.mp3"
@@ -1127,6 +1166,8 @@ label year_2020:
     with dissolve
 
     "우선 공유기부터 설치하자."
+
+    play sound "take.mp3"
 
     scene black
     with dissolve
@@ -1218,6 +1259,8 @@ label liberation:
     show ks_dark
     hide ks_normal
 
+    play sound "pick.mp3"
+
     "나는 경수에게 백악관이 그려진 면이 위쪽으로 가게 동전을 손에 쥐여주었다."
 
     show ks_normal
@@ -1255,8 +1298,7 @@ label slave:
 
     m "아니야. 잘하고 와."
 
-    show ks_dark
-    hide ks_normal
+    play sound "pick.mp3"
 
     "나는 경수에게 2021년도 100원을 주고 말았다."
 
