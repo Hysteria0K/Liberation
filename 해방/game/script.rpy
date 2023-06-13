@@ -12,7 +12,9 @@ default chance = 3
 # The game starts here.
 label start:
 
-    jump year_2014
+    #jump year_2014
+
+    play music "calm.mp3" fadein 1.5
 
     scene black
 
@@ -94,6 +96,8 @@ label prologue:
 
     "나는 동전을 아무거나 하나 잡아서 튕겼다."
 
+    stop music fadeout 1.5
+
     play sound "coin.mp3"
 
     scene white
@@ -107,6 +111,8 @@ label year_2002:
 
     scene black
     with dissolve
+
+    play music "raga.mp3" fadein 1.5
 
     "무심코 눈을 감았다가, 다시 떴을 때 나는 놀라지 않을 수 없었다."
 
@@ -270,6 +276,8 @@ label year_2017:
     "적당히 눈에 띄는 장소가..."
 
     "저기 두 나무 사이에 돌을 뭍어둬야겠다."
+
+    play sound "take.mp3"
 
     "원래 시간으로 돌아갔을 때 돌이 그대로 있다면, 과거를 통해 미래를 바꿀 수 있는 거 겠지?"
 
@@ -697,6 +705,8 @@ label after_2007:
     "후.. 일단 집중하자."
 
     "2014년도 동전을 튕겼다."
+
+    stop music fadeout 1.5
 
     play sound "coin.mp3"
 
