@@ -12,7 +12,7 @@ default chance = 3
 # The game starts here.
 label start:
 
-    #jump year_2014
+    #jump finale
 
     scene black
 
@@ -351,10 +351,13 @@ label before_2011:
 
     m "갑자기 경수 니가 한다고?"
 
+    show ks_angry
+    hide ks_normal
+
     k "안돼?"
 
-    hide ks_normal
-    show ks_dark
+    show ks_angry_dark
+    hide ks_angry
 
     "아. 안된다. 경수를 거스를 수는 없다."
 
@@ -403,6 +406,9 @@ label before_2011:
     "난 경수에게 2011년도 100원을 줬다."
 
     m "잘해."
+
+    show ks_angry
+    hide ks_normal
 
     k "...알아서 할게."
 
@@ -548,6 +554,9 @@ label after_2007:
 
     m "힘들면 그냥 내가 할게."
 
+    show ks_angry
+    hide ks_normal
+
     k "왜 그렇게 재촉하냐?"
 
     k "누가 훔쳐 가기라도 할 거 같애?"
@@ -556,8 +565,8 @@ label after_2007:
 
     k "천천히 해. 느긋하게."
 
-    show black
-    with dissolve
+    show ks_angry_dark
+    hide ks_angry
 
     "그래. 넌 느긋하겠지."
 
@@ -810,7 +819,13 @@ label year_2014_fail:
 
     k "내가 무조건 실수할 것처럼 말을 하네?"
 
+    show ks_angry_dark
+    hide ks_angry
+
     "아차."
+
+    show ks_angry
+    hide ks_angry_dark
 
     k "그렇게 중요한 일이었으면 니가 처음부터 성공했어야지."
 
@@ -824,7 +839,7 @@ label year_2014_fail:
 
     k "못 들었어? 꺼지라고."
 
-    m "알겠어."
+    m "...알겠어."
 
     hide ks_angry
 
@@ -848,7 +863,7 @@ label year_2014_fail:
     scene white
     with dissolve
 
-    "일주일 뒤"
+    "- 일주일 뒤 -"
 
     scene black
     with dissolve
@@ -1164,6 +1179,9 @@ label finale:
 
     k "하...진짜 알겠다니까 왜 이렇게 보채? 이게 그렇게 중요해?"
 
+    hide ks_angry
+    show ks_angry_dark
+
     "그렇게 중요하냐고? 아. 안 된다. 절대로 경수를 보내면 안 된다."
 
     "하지만 어떻게?"
@@ -1182,7 +1200,7 @@ label liberation:
     
     scene storage
 
-    show ks_dark
+    show ks_angry_dark
 
     "나는 웃으며 말했다."
 
